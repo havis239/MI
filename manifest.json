@@ -1,0 +1,21 @@
+{
+  "name": "MI Muhammadiyah Baruamba",
+  "short_name": "MI Baruamba",
+  "description": "Website resmi Madrasah Ibtidaiyah Muhammadiyah Baruamba - Lembaga pendidikan Islam berkualitas",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf7f0",
+  "theme_color": "#1a5c45",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "lifestyle"],
+  "lang": "id-ID",
+  "dir": "ltr"
+}

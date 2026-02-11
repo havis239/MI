@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://mi-baruamba.sch.id/sitemap.xml
+
+# Disallow admin/private areas (if any in the future)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.php$
+
+# Allow search engines to crawl
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.svg$

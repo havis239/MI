@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Berita Terbaru MI Muhammadiyah Baruamba - Informasi terkini tentang kegiatan, pengumuman, dan update madrasah">
+<meta name="keywords" content="berita MI Baruamba, informasi madrasah, pengumuman sekolah, kegiatan siswa">
+<meta name="author" content="MI Muhammadiyah Baruamba">
+<meta property="og:title" content="Berita & Informasi - MI Muhammadiyah Baruamba">
+<meta property="og:description" content="Informasi terbaru dan berita kegiatan MI Muhammadiyah Baruamba">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mi-baruamba.sch.id/berita.html">
+<link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+<link rel="apple-touch-icon" href="../assets/images/favicon.svg">
+<title>Berita & Informasi - MI Muhammadiyah Baruamba</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+  .news-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .news-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 48px rgba(0,0,0,0.12);
+  }
+  .news-image {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a5c45, #2d8a69);
+  }
+  .news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  .news-card:hover .news-image img {
+    transform: scale(1.08);
+  }
+  .news-category {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(201, 168, 76, 0.95);
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  .news-date {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #1a5c45;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  .news-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .news-body h3 {
+    font-size: 1.2rem;
+    color: #2a2a2a;
+    margin-bottom: 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  .news-excerpt {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    flex: 1;
+  }
+  .news-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: #999;
+    font-size: 0.85rem;
+    padding-top: 12px;
+    border-top: 1px solid #eee;
+  }
+  .news-meta i {
+    color: #c9a84c;
+  }
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 32px;
+    margin-top: 40px;
+  }
+  .placeholder-news-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+    padding: 20px;
+  }
+  .placeholder-news-img i {
+    font-size: 3rem;
+    margin-bottom: 12px;
+    opacity: 0.7;
+  }
+  .placeholder-news-img p {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  @media (max-width: 768px) {
+    .news-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .news-image {
+      height: 200px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div id="navbar-placeholder"></div>
+
+<!-- Page Header -->
+<section class="page-header">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../index.html"><i class="fas fa-home"></i> Beranda</a>
+      <span>/</span>
+      <span>Berita</span>
+    </div>
+    <h1>Berita & Informasi</h1>
+    <p>Update terbaru kegiatan dan pengumuman MI Muhammadiyah Baruamba</p>
+  </div>
+</section>
+
+<!-- News Section -->
+<section class="section" style="padding-top: 80px; padding-bottom: 80px;">
+  <div class="container">
+    <div class="news-grid">
+      
+      <!-- Berita 1: Penerimaan Siswa Baru -->
+      <article class="news-card reveal">
+        <div class="news-image">
+          <img src="../assets/images/berita/psb-2026.jpg" alt="Penerimaan Siswa Baru 2026/2027" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="placeholder-news-img" style="display:none;">
+            <i class="fas fa-newspaper"></i>
+            <p>Penerimaan Siswa Baru</p>
+          </div>
+          <span class="news-category">Pengumuman</span>
+          <span class="news-date"><i class="fas fa-calendar-alt"></i> 5 Feb 2026</span>
+        </div>
+        <div class="news-body">
+          <h3>Penerimaan Siswa Baru Tahun Ajaran 2026/2027</h3>
+          <p class="news-excerpt">
+            MI Muhammadiyah Baruamba membuka pendaftaran siswa baru untuk tahun ajaran 2026/2027. Kami menyediakan kuota terbatas dengan fasilitas pembelajaran yang lengkap dan tenaga pengajar berkualitas. Pendaftaran dibuka mulai Februari hingga Mei 2026.
+          </p>
+          <div class="news-meta">
+            <span><i class="fas fa-user"></i> Admin MI Baruamba</span>
+            <span><i class="fas fa-eye"></i> 245 views</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Berita 2: Karnaval -->
+      <article class="news-card reveal">
+        <div class="news-image">
+          <img src="../assets/images/gallery/karnaval/karnaval-1.jpg" alt="Karnaval Tingkat Desa Adisana" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="placeholder-news-img" style="display:none;">
+            <i class="fas fa-newspaper"></i>
+            <p>Karnaval Desa Adisana</p>
+          </div>
+          <span class="news-category">Kegiatan</span>
+          <span class="news-date"><i class="fas fa-calendar-alt"></i> 15 Jan 2026</span>
+        </div>
+        <div class="news-body">
+          <h3>Siswa MI Baruamba Ikuti Karnaval Tingkat Desa Adisana</h3>
+          <p class="news-excerpt">
+            Siswa-siswi MI Muhammadiyah Baruamba mengikuti karnaval tingkat Desa Adisana dengan menampilkan kostum kreatif dan tarian tradisional. Kegiatan ini bertujuan untuk memperkenalkan madrasah kepada masyarakat luas serta meningkatkan rasa cinta tanah air.
+          </p>
+          <div class="news-meta">
+            <span><i class="fas fa-user"></i> Admin MI Baruamba</span>
+            <span><i class="fas fa-eye"></i> 189 views</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Berita 3: Hari Santri -->
+      <article class="news-card reveal">
+        <div class="news-image">
+          <img src="../assets/images/gallery/hari-santri.jpeg" alt="Peringatan Hari Santri Nasional" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="placeholder-news-img" style="display:none;">
+            <i class="fas fa-newspaper"></i>
+            <p>Hari Santri Nasional</p>
+          </div>
+          <span class="news-category">Kegiatan</span>
+          <span class="news-date"><i class="fas fa-calendar-alt"></i> 22 Okt 2025</span>
+        </div>
+        <div class="news-body">
+          <h3>Peringatan Hari Santri Nasional 2025</h3>
+          <p class="news-excerpt">
+            MI Muhammadiyah Baruamba memperingati Hari Santri Nasional dengan berbagai kegiatan seperti pembacaan ayat suci Al-Qur'an, lomba kaligrafi, dan ceramah keagamaan. Kegiatan ini diikuti oleh seluruh siswa dengan penuh antusias dan semangat.
+          </p>
+          <div class="news-meta">
+            <span><i class="fas fa-user"></i> Admin MI Baruamba</span>
+            <span><i class="fas fa-eye"></i> 156 views</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Berita 4: Prestasi MTQ -->
+      <article class="news-card reveal">
+        <div class="news-image">
+          <img src="../assets/images/prestasi/mtq-juara-1.jpg" alt="Juara MTQ Tingkat Kabupaten" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="placeholder-news-img" style="display:none;">
+            <i class="fas fa-newspaper"></i>
+            <p>Prestasi MTQ</p>
+          </div>
+          <span class="news-category">Prestasi</span>
+          <span class="news-date"><i class="fas fa-calendar-alt"></i> 10 Des 2025</span>
+        </div>
+        <div class="news-body">
+          <h3>Siswa MI Baruamba Raih Juara 1 MTQ Tingkat Kabupaten</h3>
+          <p class="news-excerpt">
+            Ananda Ahmad Fadhil, siswa kelas 5 MI Muhammadiyah Baruamba berhasil meraih juara 1 dalam lomba Musabaqah Tilawatil Qur'an (MTQ) tingkat Kabupaten Kuningan. Prestasi ini merupakan hasil pembinaan rutin di bawah bimbingan guru tahfidz madrasah.
+          </p>
+          <div class="news-meta">
+            <span><i class="fas fa-user"></i> Admin MI Baruamba</span>
+            <span><i class="fas fa-eye"></i> 312 views</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Berita 5: Kunjungan Industri -->
+      <article class="news-card reveal">
+        <div class="news-image">
+          <img src="../assets/images/berita/kunjungan-industri.jpg" alt="Kunjungan Edukatif" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="placeholder-news-img" style="display:none;">
+            <i class="fas fa-newspaper"></i>
+            <p>Kunjungan Edukatif</p>
+          </div>
+          <span class="news-category">Kegiatan</span>
+          <span class="news-date"><i class="fas fa-calendar-alt"></i> 28 Nov 2025</span>
+        </div>
+        <div class="news-body">
+          <h3>Kunjungan Edukatif ke Museum dan Perpustakaan Daerah</h3>
+          <p class="news-excerpt">
+            Siswa kelas 4 dan 5 MI Muhammadiyah Baruamba mengikuti kunjungan edukatif ke Museum Prabu Geusan Ulun dan Perpustakaan Daerah Kuningan. Kegiatan ini bertujuan untuk menambah wawasan siswa tentang sejarah lokal dan menumbuhkan minat baca.
+          </p>
+          <div class="news-meta">
+            <span><i class="fas fa-user"></i> Admin MI Baruamba</span>
+            <span><i class="fas fa-eye"></i> 178 views</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Berita 6: Program Tahfidz -->
+      <article class="news-card reveal">
+        <div class="news-image">
+          <img src="../assets/images/berita/tahfidz-program.jpg" alt="Program Tahfidz Al-Qur'an" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="placeholder-news-img" style="display:none;">
+            <i class="fas fa-newspaper"></i>
+            <p>Program Tahfidz</p>
+          </div>
+          <span class="news-category">Program</span>
+          <span class="news-date"><i class="fas fa-calendar-alt"></i> 15 Sep 2025</span>
+        </div>
+        <div class="news-body">
+          <h3>Penguatan Program Tahfidz Al-Qur'an untuk Seluruh Siswa</h3>
+          <p class="news-excerpt">
+            MI Muhammadiyah Baruamba terus memperkuat program tahfidz Al-Qur'an dengan menambah jam pelajaran khusus hafalan. Target minimal siswa lulusan adalah hafal juz 30 dan sebagian juz 29. Program ini didukung oleh ustadz dan ustadzah yang berpengalaman.
+          </p>
+          <div class="news-meta">
+            <span><i class="fas fa-user"></i> Admin MI Baruamba</span>
+            <span><i class="fas fa-eye"></i> 203 views</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Berita 7: Vaksinasi -->
+      <article class="news-card reveal">
+        <div class="news-image">
+          <img src="../assets/images/berita/vaksinasi.jpg" alt="Program Vaksinasi Siswa" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="placeholder-news-img" style="display:none;">
+            <i class="fas fa-newspaper"></i>
+            <p>Vaksinasi Siswa</p>
+          </div>
+          <span class="news-category">Kesehatan</span>
+          <span class="news-date"><i class="fas fa-calendar-alt"></i> 8 Agt 2025</span>
+        </div>
+        <div class="news-body">
+          <h3>Pelaksanaan Vaksinasi dan Pemeriksaan Kesehatan Siswa</h3>
+          <p class="news-excerpt">
+            Bekerjasama dengan Puskesmas setempat, MI Muhammadiyah Baruamba menyelenggarakan program vaksinasi dan pemeriksaan kesehatan rutin untuk seluruh siswa. Program ini dilaksanakan untuk memastikan kesehatan dan tumbuh kembang optimal anak didik.
+          </p>
+          <div class="news-meta">
+            <span><i class="fas fa-user"></i> Admin MI Baruamba</span>
+            <span><i class="fas fa-eye"></i> 142 views</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Berita 8: Pelatihan Guru -->
+      <article class="news-card reveal">
+        <div class="news-image">
+          <img src="../assets/images/berita/pelatihan-guru.jpg" alt="Workshop Guru" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="placeholder-news-img" style="display:none;">
+            <i class="fas fa-newspaper"></i>
+            <p>Workshop Guru</p>
+          </div>
+          <span class="news-category">Pengembangan</span>
+          <span class="news-date"><i class="fas fa-calendar-alt"></i> 20 Jul 2025</span>
+        </div>
+        <div class="news-body">
+          <h3>Workshop Peningkatan Kompetensi Guru MI Baruamba</h3>
+          <p class="news-excerpt">
+            Seluruh guru MI Muhammadiyah Baruamba mengikuti workshop peningkatan kompetensi yang diselenggarakan oleh Kemenag Kuningan. Materi workshop meliputi metode pembelajaran modern, penggunaan teknologi dalam kelas, dan manajemen kelas efektif.
+          </p>
+          <div class="news-meta">
+            <span><i class="fas fa-user"></i> Admin MI Baruamba</span>
+            <span><i class="fas fa-eye"></i> 167 views</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Berita 9: Buka Bersama -->
+      <article class="news-card reveal">
+        <div class="news-image">
+          <img src="../assets/images/berita/buka-bersama.jpg" alt="Buka Bersama Ramadhan" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="placeholder-news-img" style="display:none;">
+            <i class="fas fa-newspaper"></i>
+            <p>Buka Bersama</p>
+          </div>
+          <span class="news-category">Kegiatan</span>
+          <span class="news-date"><i class="fas fa-calendar-alt"></i> 5 Apr 2025</span>
+        </div>
+        <div class="news-body">
+          <h3>Buka Bersama dan Santunan Anak Yatim Bulan Ramadhan</h3>
+          <p class="news-excerpt">
+            MI Muhammadiyah Baruamba menggelar acara buka bersama yang diikuti siswa, guru, dan wali murid. Acara ini juga dimeriahkan dengan santunan kepada anak yatim serta lomba hafalan Al-Qur'an untuk mempererat kebersamaan dan meningkatkan kepedulian sosial.
+          </p>
+          <div class="news-meta">
+            <span><i class="fas fa-user"></i> Admin MI Baruamba</span>
+            <span><i class="fas fa-eye"></i> 221 views</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div id="footer-placeholder"></div>
+
+<!-- Scroll to Top -->
+<button id="scrollTop" class="scroll-top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Components -->
+<script src="../assets/js/components.js"></script>
+<script src="../assets/js/script.js"></script>
+
+</body>
+</html>

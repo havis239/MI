@@ -1,0 +1,52 @@
+# 📂 DAFTAR FILE WEBSITE
+
+## 📄 FILE UNTUK DI-UPLOAD KE HOSTING (16 files)
+
+### Halaman Website (9 files HTML):
+1. ✅ index.html - Halaman Beranda
+2. ✅ tentang.html - Halaman Tentang Kami
+3. ✅ program.html - Halaman Program
+4. ✅ prestasi.html - Halaman Prestasi
+5. ✅ guru.html - Halaman Guru
+6. ✅ berita.html - Halaman Berita
+7. ✅ galeri.html - Halaman Galeri
+8. ✅ kontak.html - Halaman Kontak
+9. ✅ 404.html - Halaman Error
+
+### File Styling & Script (2 files):
+10. ✅ style.css - CSS (31 KB)
+11. ✅ script.js - JavaScript (15 KB)
+
+### File Assets & Config (5 files):
+12. ✅ favicon.svg - Icon website
+13. ✅ manifest.json - PWA config
+14. ✅ robots.txt - SEO robots
+15. ✅ sitemap.xml - Sitemap untuk Google
+16. ✅ .htaccess - Apache server config
+
+---
+
+## 📖 FILE DOKUMENTASI (3 files - JANGAN DIUPLOAD)
+
+1. ❌ README.md - Info singkat website
+2. ❌ PANDUAN.md - Panduan lengkap (10 KB)
+3. ❌ UPLOAD.txt - Cara upload cepat
+
+---
+
+## 📊 TOTAL:
+- **16 files** untuk upload ke hosting
+- **3 files** dokumentasi (baca lokal, jangan upload)
+- **Total size:** ~130 KB (sangat ringan!)
+
+---
+
+## 🚀 CARA UPLOAD:
+
+1. Login cPanel → File Manager → public_html
+2. Upload 16 files di atas (yang ada tanda ✅)
+3. JANGAN upload file .md dan .txt
+4. Install SSL Certificate
+5. Buka website Anda
+
+**Detail lengkap:** Baca PANDUAN.md atau UPLOAD.txt
